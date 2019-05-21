@@ -1,0 +1,33 @@
+{
+  "name": "@traum-ferienwohnungen/exit-intent",
+  "version": "0.0.2",
+  "description": "exit intent detection via js",
+  "main": "dist/exit-intent.js",
+  "scripts": {
+    "build": "parcel build src/exit-intent.js",
+    "prepublishOnly": "npm run build",
+    "postpublish": "rm -rf dist",
+    "preversion": "npm run build",
+    "version": "git add -f -A dist",
+    "postversion": "git push && git push --tags && rm -rf dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [
+    "npm",
+    "js",
+    "package",
+    "exit",
+    "intent",
+    "es6"
+  ],
+  "author": "Felix Wagner <wagner@traum-ferienwohnungen.de>",
+  "license": "GPL-3.0",
+  "devDependencies": {
+    "@babel/core": "^7.4.3",
+    "lodash.throttle": "^4.1.1",
+    "parcel-bundler": "^1.12.3"
+  }
+}
