@@ -1,6 +1,6 @@
 {
   "name": "@traum-ferienwohnungen/exit-intent",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "description": "exit intent detection via js",
   "main": "dist/exit-intent.js",
   "scripts": {
