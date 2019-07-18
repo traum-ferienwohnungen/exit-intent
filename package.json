@@ -1,11 +1,14 @@
 {
   "name": "@traum-ferienwohnungen/exit-intent",
-  "version": "1.0.1",
+  "version": "2.0.1",
   "description": "exit intent detection via js",
   "module": "index.js",
   "main": "index-es5.js",
   "scripts": {
-    "build": "babel src/exit-intent.js --out-file index-es5.js"
+    "build": "babel src/exit-intent.js --out-file index-es5.js",
+    "preversion": "npm run lint-fix && npm run build",
+    "prepublishOnly": "npm run preversion",
+    "lint-fix": "standard src/* --fix"
   },
   "repository": {
     "type": "git",

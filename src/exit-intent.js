@@ -12,7 +12,7 @@ export default class ExitIntent {
     this.config = { ...defaultOptions, ...options }
     this.eventListeners = new Map()
     this.displays = 0
-    this.addEvent('mousemove', throttle(this.mouseDidMove, this.config.eventThrottle))
+    this.addEvent('mousemove', throttle(this.mouseDidMove.bind(this), this.config.eventThrottle))
   }
 
   addEvent (eventName, callback) {
